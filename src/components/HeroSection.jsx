@@ -11,9 +11,9 @@ const HeroSection = ({ scrollToSection }) => (
     </div>
     {/* Grid Pattern */}
     <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGMwIDIuMjA5LTEuNzkxIDQtNCA0cy00LTEuNzkxLTQtNCAxLjc5MS00IDQtNCA0IDEuNzkxIDQgNHoiIGZpbGw9IiNGRkZGRkYiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-30"></div>
-    <div className="container mx-auto px-4 relative z-10">
+    <div className="container mx-auto px-2 sm:px-4 md:px-8 max-w-screen-xl relative z-10">
       <div className="min-h-screen flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-32 lg:gap-64 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -27,8 +27,8 @@ const HeroSection = ({ scrollToSection }) => (
               transition={{ delay: 0.2 }}
               className="relative"
             >
-              <div className="absolute -left-4 top-0 w-2 h-24 bg-gradient-to-b from-[#FF3366] to-[#4F46E5]"></div>
-              <h1 className="text-8xl font-black mb-6 leading-none">
+              <div className="absolute -left-2 sm:-left-4 top-0 w-1 sm:w-2 h-16 sm:h-24 bg-gradient-to-b from-[#FF3366] to-[#4F46E5]"></div>
+              <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black mb-4 sm:mb-6 leading-none">
                 <span className="text-white">Hi, I'm</span>
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF3366] to-[#4F46E5]">
@@ -42,7 +42,7 @@ const HeroSection = ({ scrollToSection }) => (
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-2xl text-gray-400 mb-12 max-w-2xl"
+              className="text-base sm:text-xl md:text-2xl text-gray-400 mb-8 sm:mb-12 max-w-xl"
             >
               A passionate Full Stack Developer crafting exceptional digital experiences with modern technologies.
             </motion.p>
@@ -50,11 +50,11 @@ const HeroSection = ({ scrollToSection }) => (
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="flex flex-wrap gap-6"
+              className="flex flex-wrap gap-4 sm:gap-6"
             >
               <a
                 href="#contact"
-                className="group relative px-8 py-4 bg-white text-black font-bold rounded-lg overflow-hidden"
+                className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-bold rounded-lg overflow-hidden text-sm sm:text-base"
                 onClick={e => { e.preventDefault(); scrollToSection('contact'); }}
               >
                 <span className="relative z-10">Get in Touch</span>
@@ -62,7 +62,7 @@ const HeroSection = ({ scrollToSection }) => (
               </a>
               <a
                 href="#projects"
-                className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-black transition-all duration-300"
+                className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-black transition-all duration-300 text-sm sm:text-base"
                 onClick={e => { e.preventDefault(); scrollToSection('projects'); }}
               >
                 View Projects
@@ -72,7 +72,7 @@ const HeroSection = ({ scrollToSection }) => (
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="flex gap-8 mt-12"
+              className="flex gap-6 sm:gap-8 mt-8 sm:mt-12"
             >
               <motion.a
                 whileHover={{ scale: 1.2, rotate: 5 }}
@@ -111,17 +111,17 @@ const HeroSection = ({ scrollToSection }) => (
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3 }}
-            className="lg:col-span-1 relative hidden lg:block"
+            className="lg:col-span-1 relative hidden sm:block"
           >
-            <div className="relative w-[600px] h-[500px] flex items-center justify-center">
+            <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:w-[600px] lg:h-[500px] flex items-center justify-center mx-auto">
               {/* Floating Terminal */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="relative w-[500px] h-[400px] bg-[#1A1A1A] rounded-2xl shadow-2xl border border-[#2D2D2D] overflow-hidden"
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                className="relative w-full max-w-[350px] sm:max-w-[400px] md:max-w-[500px] h-[300px] sm:h-[350px] md:h-[400px] bg-[#1A1A1A] rounded-2xl shadow-2xl border border-[#2D2D2D] overflow-hidden"
               >
                 {/* Terminal Header */}
-                <div className="h-12 bg-[#252526] flex items-center px-4 border-b border-[#3C3C3C]">
+                <div className="h-10 sm:h-12 bg-[#252526] flex items-center px-2 sm:px-4 border-b border-[#3C3C3C]">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
                     <div className="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
@@ -130,7 +130,7 @@ const HeroSection = ({ scrollToSection }) => (
                   <div className="ml-4 text-sm text-[#858585]">Terminal - Portfolio</div>
                 </div>
                 {/* Terminal Content */}
-                <div className="p-6 h-[calc(100%-48px)] bg-[#0A0A0A] font-mono text-sm">
+                <div className="p-3 sm:p-6 h-[calc(100%-40px)] sm:h-[calc(100%-48px)] bg-[#0A0A0A] font-mono text-xs sm:text-sm">
                   <div className="space-y-4">
                     {/* Welcome Message */}
                     <div className="text-[#4EC9B0]">

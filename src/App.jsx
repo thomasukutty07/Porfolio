@@ -149,7 +149,6 @@ const App = () => {
     { name: "ChatGPT", icon: SiOpenai, color: "#74AA9C" },
     { name: "Chrome", icon: SiGooglechrome, color: "#4285F4" },
     { name: "Impress", icon: FaFilePowerpoint, color: "#D3422A" },
-    { name: "MongoDB Compass", icon: SiMongodb, color: "#4FA441" },
     { name: "Postman", icon: SiPostman, color: "#FF6C37" },
     { name: "Ubuntu", icon: SiUbuntu, color: "#E95420" },
   ];
@@ -214,7 +213,7 @@ const App = () => {
       </main>
       <Footer />
     </div>
-  );
+  );  
 };
 
 export default App;

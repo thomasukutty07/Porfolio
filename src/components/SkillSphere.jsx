@@ -27,6 +27,10 @@ const SphereContent = ({ skills }) => {
   const points = useMemo(() => {
     const fibonacciSphere = (samples) => {
       const points = [];
+      if (samples <= 1) {
+        points.push(new THREE.Vector3(0, 0, 3));
+        return points;
+      }
       const phi = Math.PI * (3 - Math.sqrt(5));
       for (let i = 0; i < samples; i++) {
         const y = 1 - (i / (samples - 1)) * 2;
@@ -34,7 +38,7 @@ const SphereContent = ({ skills }) => {
         const theta = phi * i;
         const x = Math.cos(theta) * radius;
         const z = Math.sin(theta) * radius;
-        points.push(new THREE.Vector3(x, y, z).multiplyScalar(5));
+        points.push(new THREE.Vector3(x, y, z).multiplyScalar(3));
       }
       return points;
     };
