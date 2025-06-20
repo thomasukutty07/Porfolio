@@ -200,7 +200,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
       <Navbar sections={sections} activeSection={activeSection} scrollToSection={scrollToSection} />
-      <main className="container mx-auto px-8 pt-24">
+      <main className="mx-auto px-8 pt-24">
         <HeroSection scrollToSection={scrollToSection} />
         <AboutSection />
         <ProjectsSection projects={projects} />
