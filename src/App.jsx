@@ -86,6 +86,14 @@ const App = () => {
 
   const projects = [
     {
+      title: "UrbanHut E-Commerce Website",
+      description: "UrbanHut is a personal e-commerce website project built for learning and experimentation. This is not a commercial project, but a showcase of my skills in building modern online stores.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+      githubLink: "https://github.com/thomasukutty07/UrbanHut", // update if actual repo is different
+      liveLink: "https://e-com-1-8ewb.onrender.com/#/shop/home",
+      image: "https://placehold.co/400x300/23232B/ffffff?text=UrbanHut+E-Commerce",
+    },
+    {
       title: "Bank Website",
       description: "A modern bank website project built for personal learning and experimentation. This is not a commercial project, but a showcase of my frontend and UI/UX skills.",
       technologies: ["React", "Tailwind CSS", "Vite"],
